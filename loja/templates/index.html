@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-12 col-sm-3">
+        <h3 class="text-center">Categorias</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#">Camisetas Masculinas</a></li>
+            <li class="list-group-item"><a href="#">Camisetas Femininas</a></li>
+            <li class="list-group-item"><a href="#">Roupas de verão</a></li>
+            <li class="list-group-item"><a href="#">Roupas de inverno</a></li>
+        </ul>
+    </div><!--Fim Categoria-->
+
+    <!--Inicio Novidades-->
+    <div class="col-xs-12 col-sm-9 wow fadeInUp" data-wow-delay="1s">
+        <div id="novidades">
+            <h3 class="text-center">Novidades</h3>
+        </div>
+        <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-azul.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Azul Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+        <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-azul.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Azul Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+        <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-rosa.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Rosa Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+    </div><!--Fim Novidades-->
+
+    <!--Inicio Mais Vendidos-->
+    <div class="col-xs-12 col-sm-9 col-sm-push-3 wow fadeInUp" data-wow-delay="2s">
+        <div id="maisVendidos">
+            <h3 class="text-center">Mais Vendidos</h3>
+        </div>
+        <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-azul.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Azul Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+        <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-azul.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Azul Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+        <div class="col-md-4 thumbnail text-center wow fadeInUp" data-wow-delay="2s"><!-- classe "thumbnail" - Adiciona uma borda-->
+            <figure>
+                <img src="{% static "img/camisa-rosa.png"%}" alt="camisa azul importada" />
+                <div>
+                    <h4>Camisa Rosa Importada</h4>
+                    <p>Camisa azul importada com preço acessível e com pano de qualidade</p>
+                </div>
+            </figure>
+            <p>R$ 190,00</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+    </div><!--Fim Mais Vendidos-->
+</div><!--Fim div ROW-->
+
+{% endblock %}

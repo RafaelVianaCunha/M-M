@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="{% static "img/produto.png" %}" alt="Camiseta azul" class="img-responsive img-thumbnail" />
+        </div>
+        <div class="col-sm-6 col-sm-push-1">
+            <div class="text-center">
+                <h1>Camiseta azul importada</h1>
+                <p>R$ 129,00</p>
+                <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+            </div>
+            <!--Inicio abas-->
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li class="nav"><a href="#desc" class="active" data-toggle="tab">Descrição</a></li>
+                    <li class="nav"><a href="#informacoes" data-toggle="tab">Informações técnicas</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane  fade in active " id="desc">
+                        <div class="panel-body">
+                        <p>Camiseta azul feita em algodão com caimento perfeito proporcionando leveza e conforto nos movimentos.</p>
+                        <p>Camiseta meia manga com decote arrendondado e importada.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="informacoes">
+                        <table class="table table-responsive">
+                            <tbody>
+                                <tr>
+                                    <td>Tecido</td>
+                                    <td>Algodão</td>
+                                </tr>
+                                <tr>
+                                    <td>Tamanho</td>
+                                    <td>P, M, G, GG</td>
+                                </tr>
+                                <tr>
+                                    <td>Fabricante</td>
+                                    <td>Caelum</td>
+                                </tr>
+                                <tr>
+                                    <td>Origem</td>
+                                    <td>China</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!--Fim abas-->
+        </div>
+    </div>
+{% endblock %}
