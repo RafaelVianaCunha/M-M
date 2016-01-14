@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link href="{% static "styles/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "styles/site.css" %}" rel="stylesheet">
+    <link href="{% static "styles/animate.css" %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static "scripts/jquery-1.9.1.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/bootstrap-min.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/wow.js" %}"></script>
+    <title>Loja virtual</title>
+</head>
+<body>
+
+        <div class="container">
+            {% block body %}
+            {% endblock %}
+        </div><!--Fim div Container-->
+    <footer class="footer">
+        <p>Avenida Paulista n 1</p>
+        <p>(11) 2239-1234</p>
+    </footer>
+</body>
+</html>

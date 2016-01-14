@@ -1,0 +1,63 @@
+{% extends "baseAdm.html" %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-6  col-sm-push-3">
+            <form class="form-signin" action="{% url 'cadastrarProduto' %}" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Cadastrar Produto</legend>
+                    <div class="form-group">
+                        <label for="id_nome">Nome produto:</label>
+                        <input type="text" id="id_nome" name="nome" class="form-control" placeholder="Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="valor">Valor :</label>
+                        <input type="text" id="valor" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tecido">Tecido :</label>
+                        <input type="text" id="tecido" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tamanho">Tamanho :</label>
+                        <input type="text" id="tamanho" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fabricante">Fabricante :</label>
+                        <input type="text" id="fabricante" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição :</label>
+                        <textarea class="form-control" id="descricao" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="img">Imagem</label>
+                        <input type="file" id="img">
+
+                        <p class="help-block">selecione a imagem do produto.</p>
+                    </div>
+
+                    {% if form.errirs %}
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form.non_field_erros }}
+                        </div>
+                    {% endif %}
+
+                </fieldset>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">
+                    Enviar
+                </button>
+            </form>
+        </div>
+
+    </div><!--Fim div ROW-->
+
+{% endblock %}
