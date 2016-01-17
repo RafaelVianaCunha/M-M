@@ -5,11 +5,9 @@ from django.forms.util import ErrorList
 
 class CadastrarProdutoForm(Form):
     nome = CharField(required=True)
-    #valor = CharField
-    #tecido = CharField
-    #tamanho = CharField
-    #fabricante = CharField
-    #descricao = CharField
+    valor = CharField(required=True)
+    qtd = CharField(required=True)
+    categoria = CharField(required=True)
 
     def is_valid(self):
         valid = True
@@ -18,7 +16,6 @@ class CadastrarProdutoForm(Form):
             valid = False
 
         return valid
-
     def adiciona_erro(self, message):
         errors = self._errors.setdefault(NON_FIELD_ERRORS, ErrorList())
         errors.append(message)

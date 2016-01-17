@@ -1,12 +1,20 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 from django.db import models
+from django.utils.timezone import now
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255, null=False)
-    valor = models.CharField(max_length=255, null=True)
-    qtd = models.PositiveIntegerField(null=True)
-    descricao = models.TextField(null=True)
-    dataAdicionado = models.DateField(null=True)
-    qtdVendido = models.PositiveIntegerField(null=True)
+    valor = models.CharField(max_length=255, null=False)
+    qtd = models.PositiveIntegerField(null=False)
+    tecido = models.CharField(max_length=255, default='Não informado')
+    tamanho = models.CharField(max_length=255, default='Não informado')
+    fabricante = models.CharField(max_length=255, default='Não informado')
+    origem = models.CharField(max_length=255, default='Não informado')
+    descricao = models.TextField(default="Não informado")
+    dataAdicionado = models.DateField(default=now())
+    qtdVendido = models.PositiveIntegerField(default=0)
 
 class Categoria(models.Model):
     nome = models.CharField(max_length=255, null=True)
@@ -21,3 +29,4 @@ class Imagem(models.Model):
     img = models.FileField(upload_to='img/%Y')
     descricao = models.CharField(max_length=255, null=True)
     produto = models.ForeignKey(Produto, related_name='imagens')
+

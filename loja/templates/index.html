@@ -5,13 +5,11 @@
     <div class="col-xs-12 col-sm-3">
         <h3 class="text-center">Categorias</h3>
         <ul class="list-group">
-            <li class="list-group-item"><a href="#">Camisetas Masculinas</a></li>
-            <li class="list-group-item"><a href="#">Camisetas Femininas</a></li>
-            <li class="list-group-item"><a href="#">Roupas de verão</a></li>
-            <li class="list-group-item"><a href="#">Roupas de inverno</a></li>
+            {% for categoria in categorias %}
+                <li class="list-group-item"><a href="categoria/{{ categoria.id }}">{{categoria.nome}}</a></li>
+             {% endfor %}
         </ul>
     </div><!--Fim Categoria-->
-
     <!--Inicio Novidades-->
     <div class="col-xs-12 col-sm-9 wow fadeInUp" data-wow-delay="1s">
         <div id="novidades">

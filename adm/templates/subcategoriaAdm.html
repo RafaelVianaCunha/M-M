@@ -12,8 +12,6 @@
 
                     <div class="form-group">
                         <label for="descricao">Selecione a categoria :</label>
-
-
                         <select name="categoria" class="form-control">
                             {% for categoria in categorias %}
                                 <option value="{{ categoria.id }}">{{ categoria.nome }}</option>
