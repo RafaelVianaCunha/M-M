@@ -13,11 +13,25 @@
     <title>Loja virtual</title>
 </head>
 <body>
-
-        <div class="container">
-            {% block body %}
-            {% endblock %}
-        </div><!--Fim div Container-->
+    <div class="item">
+        <img src="{% static "img/admin_banner.jpg" %}" class="fullscreen" alt="Moda Infantil" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <h3 class="text-center">Menu</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="/adm/produto">Adicionar Produto</a></li>
+                    <li class="list-group-item"><a href="/adm/categoria">Adicionar Categoria</a></li>
+                    <li class="list-group-item"><a href="/adm/subcategoria">Adicionar Sub-Categoria</a></li>
+                </ul>
+            </div><!--Fim Menu-->
+            <div class="col-xs-12 col-sm-6">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+    </div><!--Fim div Container-->
     <footer class="footer">
         <p>Avenida Paulista n 1</p>
         <p>(11) 2239-1234</p>
