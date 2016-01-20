@@ -20,7 +20,7 @@
             <div class="col-md-4 thumbnail text-center"><!-- classe "thumbnail" - Adiciona uma borda-->
                 <figure>
                     {% for img in produto.imagens.all %}
-                    <img src="{{ img.img.url }}" alt="{{ img.img.descricao }}" />
+                        <img src="{{ img.img.url }}" alt="{{ img.img.descricao }}" />
                     {% endfor %}
 
                     <div>
