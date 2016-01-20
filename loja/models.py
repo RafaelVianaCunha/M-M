@@ -7,14 +7,14 @@ from django.utils.timezone import now
 class Produto(models.Model):
     nome = models.CharField(max_length=255, null=False)
     valor = models.CharField(max_length=255, null=False)
-    qtd = models.PositiveIntegerField(null=False)
+    qtd = models.CharField(max_length=255, null=False)
     tecido = models.CharField(max_length=255, default='Não informado')
     tamanho = models.CharField(max_length=255, default='Não informado')
     fabricante = models.CharField(max_length=255, default='Não informado')
     origem = models.CharField(max_length=255, default='Não informado')
     descricao = models.TextField(default="Não informado")
     dataAdicionado = models.DateField(default=now())
-    qtdVendido = models.PositiveIntegerField(default=0)
+    qtdVendido = models.CharField(max_length=255, default=0)
 
 class Categoria(models.Model):
     nome = models.CharField(max_length=255, null=True)
@@ -26,7 +26,7 @@ class SubCategoria(models.Model):
     categoria = models.ForeignKey(Categoria, related_name='subCategoria')
 
 class Imagem(models.Model):
-    img = models.FileField(upload_to='img/%Y')
+    img = models.ImageField(upload_to='img/%Y')
     descricao = models.CharField(max_length=255, null=True)
     produto = models.ForeignKey(Produto, related_name='imagens')
 

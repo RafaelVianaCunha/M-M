@@ -42,7 +42,7 @@ class CadastrarProduto(View):
                          descricao=dados_form["desImg"],
                          produto=produto)
             img.save()
-            return redirect('produto')
+            return redirect('produtoAdm')
 
         return render(request, self.template_nome, {'form': form, 'categorias': Categoria.objects.all()})
 
@@ -62,7 +62,7 @@ class CategoriaView(View):
             categoria = Categoria(nome=dados_form['nome'],
                                   descricao=dados_form['descricao'])
             categoria.save()
-            return redirect(categoria)
+            return redirect('categoria')
         return render(request, self.template_nome, {'form': form})
 
 
